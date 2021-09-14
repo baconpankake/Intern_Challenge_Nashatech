@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.link {
+  color: #FFFFFF;
+  transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+  line-height: 1em;
+}
+
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: flex .4s ease;
+  position: relative;
+}
+
+.section .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color .8s ease;
+}
+
+.section .content {
+  z-index: 2;
+}
+
+.section:hover {
+  flex: 2;
+}
+
+.section:hover .overlay {
+  background-color: hsla(0, 100%, 90%, 0.3);
+}
+
+#facebook {
+  background-image: url(https://cdn.dribbble.com/users/2816838/screenshots/8751153/media/25cf7fdccf070abbc698adbb3a2c0ccc.png?compress=1&resize=1600x1200);
+}
+
+
+#gif-generate {
+  background-image: url(https://static.wixstatic.com/media/4cbe8d_f1ed2800a49649848102c68fc5a66e53~mv2.gif);
+}
+
+#gif-carousel {
+  background-image: url(https://frontbackend.com/storage/collections/css-horizontal-carousels/react-carousel.gif);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+.cont_full {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+.navi {
+  width: 100%;
+  background-color: #242424;
+  color: white;
+}
+.cont {
+  width: 1100px;
+  margin: 0 auto;
+}
+.flexy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.padd {
+  padding: 50px 0;
+}
+a.logo {
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+}
+a.logo:hover,
+.nav_items li a:hover {
+  color: #f0f0f0;
+}
+a.logo span {
+  font-weight: bold;
+}
+.nav_items {
+  list-style-type: none;
+  display: flex;
+}
+
+.btn {
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+.btn:hover {
+  background-color: #f0f0f0;
+  color: #d30000;
+}
+.footer {
+  background-color: #242424;
+  color: #d6d6d6;
+}
+.footer h1 {
+  color: #fff;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<title>GIF carousel goes brrr</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<body style="padding-top:80px;">
+
+<!--navigation heseg-->
+    <nav class="navi" style="position: fixed; top:0;">
+        <div class="cont flexy" style="height: 80px;">
+            <a href="#" class="logo" ><img src="logo.png" alt="logo" style="width:80px;height:80px;"></a>
+            <a href="http://giphy.com" class="btn">Search</a>
+        </div>
+    </nav>
+
+
+<!--BackButton-->
+<a href="index.html" class="backbtn" target="_blank" style="color: white;">Буцах ↩</a>
+
+<!--Main Section -->
+<h1>GIF! Carousal? SlideShow?? 🤩</h1>
+<section id="roster"> 
+<section id="slider">
+  <input type="radio" name="slider" id="s1">
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3" checked>
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
+  <label for="s1" id="slide1"></label>
+  <label for="s2" id="slide2"></label>
+  <label for="s3" id="slide3"></label>
+  <label for="s4" id="slide4"></label>
+  <label for="s5" id="slide5"></label>
+</section>
+</section>
+</div>
+ <!--footer where to find-->
+    <section id="find" class="footer padd">
+        <div class="cont">
+           <p>by baconpankake?<p>         
+        </div>
+    </section>
+<!-- CSS starts here-->
+<style type="text/css">
+  * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  background-image: url("https://gifimage.net/wp-content/uploads/2018/05/space-background-gif-6.gif");
+  user-select: none;
+}
+
+[type=radio] {
+  display: none;
+}
+
+#slider {
+  height: 500px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#slider label {
+  margin: auto;
+  width: 30%;
+  height: 80%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(15%,0,-100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+}
+
+#slide1 {  background-image: url("https://i.pinimg.com/originals/14/77/cd/1477cd9ed1550be977adcc2cf57a2461.gif");
+ }
+#slide2 {  background-image: url("https://i.pinimg.com/originals/53/35/e0/5335e0feec7c89a4278b069c8d90e8f7.gif");
+ }
+#slide3 {  background-image: url("https://www.hubspot.com/hubfs/Smiling%20Leo%20Perfect%20GIF.gif");
+ }
+#slide4 {   background-image: url("https://media3.giphy.com/media/jkSHn9mHWJID6/200.gif");
+}
+#slide5 {  background-image: url("https://i.gifer.com/EUA.gif");
+ }
+  .backbtn {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  display: block;
+  z-index: 11;
+  transition: all 250ms linear;
+}
+.backbtn img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+.cont_full {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+.navi {
+  width: 100%;
+  background-color: #242424;
+  color: white;
+}
+.cont {
+  width: 1100px;
+  margin: 0 auto;
+}
+.flexy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.padd {
+  padding: 50px 0;
+}
+a.logo {
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+}
+a.logo:hover,
+.nav_items li a:hover {
+  color: #f0f0f0;
+}
+a.logo span {
+  font-weight: bold;
+}
+.nav_items {
+  list-style-type: none;
+  display: flex;
+}
+
+.btn {
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+.btn:hover {
+  background-color: #f0f0f0;
+  color: #d30000;
+}
+.backbtn {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  display: block;
+  z-index: 11;
+  transition: all 250ms linear;
+}
+.backbtn img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: 0;
+
+  text-align: center;
+}
+.card {
+  width: 48%;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.card p {
+  text-align: center;
+  color: #fff;
+  padding: 5px 0;
+}
+.footer {
+  background-color: #242424;
+  color: #d6d6d6;
+}
+.footer h1 {
+  color: #fff;
+}
+</style>
+
+<!-- CSS ends here 
